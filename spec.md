@@ -1,33 +1,28 @@
 # Canine Castel
 
 ## Current State
-New project — no existing application.
+Fully built website with Navbar, Hero, QuickInfoBar, Products (5 categories, no pricing), Services, WhyChooseUs, Reviews, Gallery, FinalCTA, Footer.
 
 ## Requested Changes (Diff)
 
 ### Add
-- Full single-page marketing website for Canine Castel pet store, Kanpur
-- Sticky navbar with logo, nav links (Home, Products, Services, Reviews, Contact), and "Call Now" CTA button
-- Hero section with pet store background image, headline, subheadline, and two CTA buttons (Call Now, Get Directions)
-- Quick info bar with phone, address, and hours
-- Products section with 5 product cards (Dog Food, Cat Food, Collars & Leashes, Pet Accessories, Grooming Products)
-- Services/Value section highlighting pet care guidance, quality products, affordable pricing, and helpful support
-- Why Choose Us section with 4 trust points
-- Reviews section with 3-4 realistic customer reviews
-- Photo gallery section with pet/store images
-- Final CTA section "Visit Canine Castel Today" with Call Now and Get Directions buttons
-- Footer with phone, full address, store hours
+- Pricing labels ("Starting from ₹XXX") on each product card with realistic prices per category
+- "Call Now" and "Enquire" CTA buttons on product cards
+- A new Dog Breeds section (after Products, before Services) showing popular breeds with images, "Price on Request" / "Enquire Now" label, and enquiry CTA buttons
+- Breeds section nav link added to navbar
 
 ### Modify
-- N/A (new project)
+- Products section: add pricing badge and action buttons to each card
+- NAV_LINKS: add "Breeds" link pointing to #breeds
 
 ### Remove
-- N/A (new project)
+- Nothing removed
 
 ## Implementation Plan
-1. Generate hero background image, product category images, and gallery images
-2. Build React frontend with all sections
-3. Apply light theme: white + soft grey (#F3F5F7) backgrounds, green (#2E7D6B) accents, gold (#F2C94C) highlights
-4. Ensure mobile responsiveness
-5. Add smooth fade-in and hover animations
-6. No backend needed — purely a marketing/brochure site
+1. Update PRODUCTS data to include `startingPrice` (number, INR) for each product
+2. Update product cards: show "Starting from ₹XXX" badge in gold/amber, add row of "Call Now" (tel link) and "Enquire" (tel link or mailto) buttons below
+3. Add BREEDS data array with name and Unsplash/generated image per breed (Golden Retriever, Labrador, German Shepherd, Beagle, Pomeranian, Shih Tzu, Husky, Rottweiler)
+4. Generate breed images using generate_image tool
+5. Build DogBreeds section component with grid layout, breed image, name, "Price on Request" tag, and "Enquire Now" + "Call Now" buttons
+6. Insert DogBreeds between Products and Services in App layout
+7. Add #breeds anchor to nav

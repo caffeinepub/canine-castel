@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 const NAV_LINKS = [
   { label: "Home", href: "#home" },
   { label: "Products", href: "#products" },
+  { label: "Breeds", href: "#breeds" },
   { label: "Services", href: "#services" },
   { label: "Reviews", href: "#reviews" },
   { label: "Contact", href: "#contact" },
@@ -16,26 +17,74 @@ const PRODUCTS = [
     name: "Dog Food",
     image: "/assets/generated/product-dog-food.dim_400x400.jpg",
     desc: "Premium brands like Pedigree & more. Nutritious and delicious!",
+    startingPrice: 299,
   },
   {
     name: "Cat Food",
     image: "/assets/generated/product-cat-food.dim_400x400.jpg",
     desc: "Complete nutrition for your feline companion.",
+    startingPrice: 249,
   },
   {
     name: "Collars & Leashes",
     image: "/assets/generated/product-collars.dim_400x400.jpg",
     desc: "Durable, comfortable, and stylish options for every pet.",
+    startingPrice: 199,
   },
   {
     name: "Pet Accessories",
     image: "/assets/generated/product-accessories.dim_400x400.jpg",
     desc: "Toys, bowls, beds and everything in between.",
+    startingPrice: 149,
   },
   {
     name: "Grooming Products",
     image: "/assets/generated/product-grooming.dim_400x400.jpg",
     desc: "Keep your pet clean, healthy and looking great.",
+    startingPrice: 349,
+  },
+];
+
+const BREEDS = [
+  {
+    name: "Golden Retriever",
+    image: "/assets/generated/breed-golden-retriever.dim_400x400.jpg",
+    traits: "Friendly, loyal, great with families",
+  },
+  {
+    name: "Labrador",
+    image: "/assets/generated/breed-labrador.dim_400x400.jpg",
+    traits: "Playful, gentle, easy to train",
+  },
+  {
+    name: "German Shepherd",
+    image: "/assets/generated/breed-german-shepherd.dim_400x400.jpg",
+    traits: "Intelligent, protective, versatile",
+  },
+  {
+    name: "Beagle",
+    image: "/assets/generated/breed-beagle.dim_400x400.jpg",
+    traits: "Curious, cheerful, great for apartments",
+  },
+  {
+    name: "Pomeranian",
+    image: "/assets/generated/breed-pomeranian.dim_400x400.jpg",
+    traits: "Lively, fluffy, low maintenance",
+  },
+  {
+    name: "Shih Tzu",
+    image: "/assets/generated/breed-shih-tzu.dim_400x400.jpg",
+    traits: "Affectionate, calm, great companion",
+  },
+  {
+    name: "Husky",
+    image: "/assets/generated/breed-husky.dim_400x400.jpg",
+    traits: "Energetic, striking, playful",
+  },
+  {
+    name: "Rottweiler",
+    image: "/assets/generated/breed-rottweiler.dim_400x400.jpg",
+    traits: "Strong, loyal, confident",
   },
 ];
 
@@ -378,7 +427,7 @@ function Products() {
           {PRODUCTS.map((product, i) => (
             <div
               key={product.name}
-              className="bg-white rounded-2xl shadow-card card-hover overflow-hidden border border-gray-100 reveal"
+              className="bg-white rounded-2xl shadow-card card-hover overflow-hidden border border-gray-100 reveal flex flex-col"
               style={{ transitionDelay: `${i * 0.08}s` }}
               data-ocid={`products.item.${i + 1}`}
             >
@@ -389,20 +438,150 @@ function Products() {
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
               </div>
-              <div className="p-5">
+              <div className="p-5 flex flex-col flex-1">
                 <h3 className="font-bold text-gray-900 text-lg mb-1">
                   {product.name}
                 </h3>
-                <p className="text-gray-500 text-sm mb-4">{product.desc}</p>
+                <p className="text-gray-500 text-sm mb-3">{product.desc}</p>
+                {/* Pricing badge */}
                 <span
-                  className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-white"
-                  style={{ backgroundColor: "#2E7D6B" }}
+                  className="inline-block self-start px-3 py-1 rounded-full text-xs font-semibold mb-4"
+                  style={{ backgroundColor: "#FEF3C7", color: "#92400E" }}
                 >
-                  Available at Best Prices
+                  Starting from ₹{product.startingPrice}
                 </span>
+                {/* Action buttons */}
+                <div className="flex gap-2 mt-auto">
+                  <a
+                    href="tel:07007691375"
+                    className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold text-white transition-all duration-200 hover:opacity-90"
+                    style={{ backgroundColor: "#2E7D6B" }}
+                    data-ocid={`products.item.${i + 1}`}
+                  >
+                    <Phone className="w-3.5 h-3.5" />
+                    Call Now
+                  </a>
+                  <a
+                    href="tel:07007691375"
+                    className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold transition-all duration-200 border-2 hover:bg-[#2E7D6B] hover:text-white"
+                    style={{ borderColor: "#2E7D6B", color: "#2E7D6B" }}
+                    data-ocid={`products.item.${i + 1}`}
+                  >
+                    💬 Enquire
+                  </a>
+                </div>
               </div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─── Dog Breeds ───────────────────────────────────────────────────────────────
+
+function DogBreeds() {
+  return (
+    <section
+      id="breeds"
+      className="py-16 sm:py-20"
+      style={{ backgroundColor: "#F3F5F7" }}
+    >
+      <div className="max-w-container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 reveal">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
+            Popular Dog Breeds
+          </h2>
+          <p className="text-gray-500 text-lg">
+            Find your perfect companion — enquire for pricing and availability
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          {BREEDS.map((breed, i) => (
+            <div
+              key={breed.name}
+              className="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden flex flex-col card-hover reveal"
+              style={{ transitionDelay: `${i * 0.07}s` }}
+              data-ocid={`breeds.item.${i + 1}`}
+            >
+              {/* Image */}
+              <div className="aspect-square overflow-hidden">
+                <img
+                  src={breed.image}
+                  alt={breed.name}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              {/* Content */}
+              <div className="p-4 flex flex-col flex-1">
+                <h3 className="font-bold text-gray-900 text-base mb-1">
+                  {breed.name}
+                </h3>
+                <p className="text-gray-400 text-xs mb-3 leading-relaxed">
+                  {breed.traits}
+                </p>
+                {/* Price on request badge */}
+                <span
+                  className="inline-block self-start px-2.5 py-0.5 rounded-full text-xs font-semibold mb-3"
+                  style={{ backgroundColor: "#FEF3C7", color: "#92400E" }}
+                >
+                  Price on Request
+                </span>
+                {/* Buttons */}
+                <div className="flex gap-2 mt-auto">
+                  <a
+                    href="tel:07007691375"
+                    className="flex-1 flex items-center justify-center gap-1 px-2 py-1.5 rounded-lg text-xs font-semibold text-white transition-all duration-200 hover:opacity-90"
+                    style={{ backgroundColor: "#2E7D6B" }}
+                    data-ocid={`breeds.item.${i + 1}`}
+                  >
+                    <Phone className="w-3 h-3" />
+                    Call Now
+                  </a>
+                  <a
+                    href="tel:07007691375"
+                    className="flex-1 flex items-center justify-center px-2 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 border-2 hover:bg-[#2E7D6B] hover:text-white"
+                    style={{ borderColor: "#2E7D6B", color: "#2E7D6B" }}
+                    data-ocid={`breeds.item.${i + 1}`}
+                  >
+                    Enquire Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Section-level CTA */}
+        <div
+          className="mt-12 text-center py-8 px-6 rounded-2xl reveal"
+          style={{ backgroundColor: "#E8F5F1" }}
+        >
+          <p className="text-gray-700 font-medium text-base mb-5">
+            Looking for a specific breed? Call us or enquire below.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href="tel:07007691375"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-white transition-all duration-200 hover:opacity-90 hover:shadow-md text-sm"
+              style={{ backgroundColor: "#2E7D6B" }}
+              data-ocid="breeds.primary_button"
+            >
+              <Phone className="w-4 h-4" />
+              Call Now
+            </a>
+            <a
+              href="tel:07007691375"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-200 border-2 hover:bg-[#2E7D6B] hover:text-white"
+              style={{ borderColor: "#2E7D6B", color: "#2E7D6B" }}
+              data-ocid="breeds.secondary_button"
+            >
+              💬 Enquire Now
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -413,11 +592,7 @@ function Products() {
 
 function Services() {
   return (
-    <section
-      id="services"
-      className="py-16 sm:py-20"
-      style={{ backgroundColor: "#F3F5F7" }}
-    >
+    <section id="services" className="py-16 sm:py-20 bg-white">
       <div className="max-w-container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 reveal">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -469,7 +644,7 @@ function Services() {
 
 function WhyChooseUs() {
   return (
-    <section className="py-16 sm:py-20 bg-white">
+    <section className="py-16 sm:py-20" style={{ backgroundColor: "#F3F5F7" }}>
       <div className="max-w-container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 reveal">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -508,11 +683,7 @@ function WhyChooseUs() {
 
 function Reviews() {
   return (
-    <section
-      id="reviews"
-      className="py-16 sm:py-20"
-      style={{ backgroundColor: "#F3F5F7" }}
-    >
+    <section id="reviews" className="py-16 sm:py-20 bg-white">
       <div className="max-w-container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 reveal">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -547,7 +718,7 @@ function Reviews() {
 
 function Gallery() {
   return (
-    <section className="py-16 sm:py-20 bg-white">
+    <section className="py-16 sm:py-20" style={{ backgroundColor: "#F3F5F7" }}>
       <div className="max-w-container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 reveal">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -718,6 +889,7 @@ export default function App() {
         <Hero />
         <QuickInfoBar />
         <Products />
+        <DogBreeds />
         <Services />
         <WhyChooseUs />
         <Reviews />
