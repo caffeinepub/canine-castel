@@ -104,7 +104,7 @@ const SERVICES = [
   {
     icon: "💰",
     title: "Affordable Pricing",
-    desc: "Best prices in Kanpur. Premium products without burning your pocket.",
+    desc: "Best prices in Nagpur. Premium products without burning your pocket.",
     highlight: false,
   },
   {
@@ -116,7 +116,7 @@ const SERVICES = [
 ];
 
 const WHY_US = [
-  "Trusted by local pet owners in Kanpur",
+  "Trusted by local pet owners in Nagpur",
   "Expert guidance for raising healthy pets",
   "Wide variety of products for all pets",
   "Friendly and approachable service",
@@ -136,7 +136,7 @@ const REVIEWS = [
   {
     name: "Amit Verma",
     stars: 4,
-    text: "Very reasonable prices compared to other pet stores in Kanpur. Found everything I needed in one place.",
+    text: "Very reasonable prices compared to other pet stores in Nagpur. Found everything I needed in one place.",
   },
   {
     name: "Sunita Rawat",
@@ -156,7 +156,7 @@ const GALLERY = [
   },
   {
     src: "/assets/generated/gallery-store.dim_500x400.jpg",
-    alt: "Canine Castel store",
+    alt: "Pets at Home store",
   },
   {
     src: "/assets/generated/gallery-dogs-park.dim_500x400.jpg",
@@ -239,7 +239,7 @@ function Navbar() {
             className="font-bold text-xl tracking-tight"
             style={{ color: "#2E7D6B" }}
           >
-            Canine Castel
+            Pets at Home
           </span>
         </a>
 
@@ -262,7 +262,7 @@ function Navbar() {
 
         {/* CTA */}
         <a
-          href="tel:07007691375"
+          href="tel:08888845088"
           className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white transition-all duration-200 hover:opacity-90 hover:shadow-md"
           style={{ backgroundColor: "#2E7D6B" }}
           data-ocid="nav.button"
@@ -298,7 +298,7 @@ function Navbar() {
             </a>
           ))}
           <a
-            href="tel:07007691375"
+            href="tel:08888845088"
             className="mt-2 flex items-center justify-center gap-2 px-5 py-3 rounded-full text-sm font-semibold text-white"
             style={{ backgroundColor: "#2E7D6B" }}
             data-ocid="nav.button"
@@ -323,7 +323,7 @@ function Hero() {
       {/* Background */}
       <img
         src="/assets/generated/hero-pet-store.dim_1400x700.jpg"
-        alt="Canine Castel pet store"
+        alt="Pets at Home store"
         className="absolute inset-0 w-full h-full object-cover"
       />
       {/* Overlay */}
@@ -338,12 +338,12 @@ function Hero() {
           Quality Care &amp; Supplies for Your Pets
         </h1>
         <p className="text-lg sm:text-xl text-gray-200 mb-8 animate-fade-in-up-delay-1">
-          Trusted pet store in Kanpur for food, accessories &amp; expert
+          Trusted pet store in Nagpur for food, accessories &amp; expert
           guidance
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up-delay-2">
           <a
-            href="tel:07007691375"
+            href="tel:08888845088"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-semibold text-white transition-all duration-200 hover:opacity-90 hover:shadow-lg"
             style={{ backgroundColor: "#2E7D6B" }}
             data-ocid="hero.primary_button"
@@ -352,7 +352,7 @@ function Hero() {
             Call Now
           </a>
           <a
-            href="https://maps.google.com/?q=107/47+Jawahar+Nagar+Kanpur+208012"
+            href="https://maps.google.com/?q=330+Mangalwari+Mahal+Nagpur+Maharashtra+440032"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-semibold text-white border-2 border-white transition-all duration-200 hover:bg-white hover:text-gray-900"
@@ -363,7 +363,7 @@ function Hero() {
           </a>
         </div>
         <p className="mt-6 text-gray-300 text-sm animate-fade-in-up-delay-3">
-          📞 070076 91375&nbsp;&nbsp;|&nbsp;&nbsp;📍 Jawahar Nagar, Kanpur
+          📞 088888 45088&nbsp;&nbsp;|&nbsp;&nbsp;📍 Mahal, Nagpur
         </p>
       </div>
     </section>
@@ -378,13 +378,13 @@ function QuickInfoBar() {
       <div className="max-w-container mx-auto px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm font-medium">
           <a
-            href="tel:07007691375"
+            href="tel:08888845088"
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             style={{ color: "#2E7D6B" }}
             data-ocid="info.button"
           >
             <Phone className="w-4 h-4 flex-shrink-0" />
-            070076 91375
+            088888 45088
           </a>
           <span className="hidden sm:block text-gray-300">|</span>
           <span className="flex items-center gap-2 text-gray-700 text-center sm:text-left">
@@ -392,7 +392,7 @@ function QuickInfoBar() {
               className="w-4 h-4 flex-shrink-0"
               style={{ color: "#2E7D6B" }}
             />
-            107/47, near Bhadauriya Chauraha, Jawahar Nagar, Kanpur, UP 208012
+            330, Mangalwari, Mahal, Nagpur, Maharashtra 440032
           </span>
           <span className="hidden sm:block text-gray-300">|</span>
           <span className="flex items-center gap-2 text-gray-700">
@@ -453,7 +453,7 @@ function Products() {
                 {/* Action buttons */}
                 <div className="flex gap-2 mt-auto">
                   <a
-                    href="tel:07007691375"
+                    href="tel:08888845088"
                     className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold text-white transition-all duration-200 hover:opacity-90"
                     style={{ backgroundColor: "#2E7D6B" }}
                     data-ocid={`products.item.${i + 1}`}
@@ -462,7 +462,7 @@ function Products() {
                     Call Now
                   </a>
                   <a
-                    href="tel:07007691375"
+                    href="tel:08888845088"
                     className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold transition-all duration-200 border-2 hover:bg-[#2E7D6B] hover:text-white"
                     style={{ borderColor: "#2E7D6B", color: "#2E7D6B" }}
                     data-ocid={`products.item.${i + 1}`}
@@ -533,7 +533,7 @@ function DogBreeds() {
                 {/* Buttons */}
                 <div className="flex gap-2 mt-auto">
                   <a
-                    href="tel:07007691375"
+                    href="tel:08888845088"
                     className="flex-1 flex items-center justify-center gap-1 px-2 py-1.5 rounded-lg text-xs font-semibold text-white transition-all duration-200 hover:opacity-90"
                     style={{ backgroundColor: "#2E7D6B" }}
                     data-ocid={`breeds.item.${i + 1}`}
@@ -542,7 +542,7 @@ function DogBreeds() {
                     Call Now
                   </a>
                   <a
-                    href="tel:07007691375"
+                    href="tel:08888845088"
                     className="flex-1 flex items-center justify-center px-2 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 border-2 hover:bg-[#2E7D6B] hover:text-white"
                     style={{ borderColor: "#2E7D6B", color: "#2E7D6B" }}
                     data-ocid={`breeds.item.${i + 1}`}
@@ -565,7 +565,7 @@ function DogBreeds() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="tel:07007691375"
+              href="tel:08888845088"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-white transition-all duration-200 hover:opacity-90 hover:shadow-md text-sm"
               style={{ backgroundColor: "#2E7D6B" }}
               data-ocid="breeds.primary_button"
@@ -574,7 +574,7 @@ function DogBreeds() {
               Call Now
             </a>
             <a
-              href="tel:07007691375"
+              href="tel:08888845088"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-200 border-2 hover:bg-[#2E7D6B] hover:text-white"
               style={{ borderColor: "#2E7D6B", color: "#2E7D6B" }}
               data-ocid="breeds.secondary_button"
@@ -651,7 +651,7 @@ function WhyChooseUs() {
             Why Pet Owners Trust Us
           </h2>
           <p className="text-gray-500 text-lg">
-            Serving Kanpur with care, since day one
+            Serving Nagpur with care, since day one
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -690,7 +690,7 @@ function Reviews() {
             What Our Customers Say
           </h2>
           <p className="text-gray-500 text-lg">
-            Real reviews from real pet lovers in Kanpur
+            Real reviews from real pet lovers in Nagpur
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -724,7 +724,7 @@ function Gallery() {
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
             Our Happy Pets &amp; Store
           </h2>
-          <p className="text-gray-500 text-lg">A peek inside Canine Castel</p>
+          <p className="text-gray-500 text-lg">A peek inside Pets at Home</p>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {GALLERY.map((img, i) => (
@@ -750,7 +750,7 @@ function FinalCTA() {
     <section className="py-16 sm:py-20" style={{ backgroundColor: "#2E7D6B" }}>
       <div className="max-w-container mx-auto px-4 sm:px-6 text-center reveal">
         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-          Visit Canine Castel Today
+          Visit Pets at Home Today
         </h2>
         <p className="text-green-100 text-lg mb-8 max-w-lg mx-auto">
           Come visit us or give us a call &mdash; we&apos;d love to help your
@@ -758,7 +758,7 @@ function FinalCTA() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="tel:07007691375"
+            href="tel:08888845088"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-semibold bg-white transition-all duration-200 hover:shadow-lg"
             style={{ color: "#2E7D6B" }}
             data-ocid="cta.primary_button"
@@ -767,7 +767,7 @@ function FinalCTA() {
             Call Now
           </a>
           <a
-            href="https://maps.google.com/?q=107/47+Jawahar+Nagar+Kanpur+208012"
+            href="https://maps.google.com/?q=330+Mangalwari+Mahal+Nagpur+Maharashtra+440032"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full font-semibold text-white border-2 border-white transition-all duration-200 hover:bg-white"
@@ -802,21 +802,21 @@ function Footer() {
             <div className="flex items-center gap-2 mb-3">
               <span className="text-xl">🐾</span>
               <span className="font-bold text-xl" style={{ color: "#2E7D6B" }}>
-                Canine Castel
+                Pets at Home
               </span>
             </div>
             <p className="text-gray-500 text-sm mb-4 leading-relaxed">
-              Your trusted pet store in Kanpur. Quality products &amp; expert
+              Your trusted pet store in Nagpur. Quality products &amp; expert
               care for your beloved pets.
             </p>
             <a
-              href="tel:07007691375"
+              href="tel:08888845088"
               className="inline-flex items-center gap-2 text-sm font-semibold hover:opacity-80 transition-opacity"
               style={{ color: "#2E7D6B" }}
               data-ocid="footer.button"
             >
               <Phone className="w-4 h-4" />
-              070076 91375
+              088888 45088
             </a>
           </div>
 
@@ -828,10 +828,7 @@ function Footer() {
                 className="w-4 h-4 mt-0.5 flex-shrink-0"
                 style={{ color: "#2E7D6B" }}
               />
-              <span>
-                107/47, near Bhadauriya Chauraha, Jawahar Nagar, Kanpur, Uttar
-                Pradesh 208012
-              </span>
+              <span>330, Mangalwari, Mahal, Nagpur, Maharashtra 440032</span>
             </div>
             <div className="flex items-center gap-2 text-gray-500 text-sm">
               <Clock
@@ -862,7 +859,7 @@ function Footer() {
 
         {/* Divider */}
         <div className="mt-10 pt-6 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-400">
-          <span>&copy; {year} Canine Castel. All rights reserved.</span>
+          <span>&copy; {year} Pets at Home. All rights reserved.</span>
           <a
             href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(typeof window !== "undefined" ? window.location.hostname : "")}`}
             target="_blank"
